@@ -17,13 +17,6 @@ const List = ({contacts, removeContact}) => {
                       Add Contact</Link>
                 </div>
 
-                {/* {showingContacts.length !== contacts.length && (
-                  <div className='showing-contacts'>
-                    <span>{showingContacts.length} of {contacts.length} | </span>
-                    <button onClick={this.clearQuery}>Show All</button>
-                  </div>
-                )} */}
-
                 <ol className='contact-list'>
                   {contacts.map( contact => (
                     <li key={contact.id} className='contact-list-item'>

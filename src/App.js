@@ -8,8 +8,12 @@ import CreateContact from './components/CreateContact';
 
 function App() {
 
-
   const [contacts, setContacts] = useState([]);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const createContact = async (contact) => {
+    await ContactsAPI.create(contact);
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,22 +22,12 @@ function App() {
     }
     fetchData();
     
-  }, []);
+  }, [createContact]);
 
   const removeContact = (contact) => {
     setContacts(contacts.filter(con => con.id !== contact.id));
 
     ContactsAPI.remove(contact);
-  }
-
-  const createContact = (contact) => {
-    console.log(contact);
-    ContactsAPI.create(contact).then(contact => {
-      setContacts([
-        ...contacts,
-        contact
-      ]);
-    })
   }
 
   return (
