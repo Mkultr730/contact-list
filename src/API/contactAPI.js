@@ -14,3 +14,7 @@ const headers = {
 }
 
 export const getAll = async () => axios.get(`${api}/contacts`, { headers });
+
+export const remove = async (contact) => axios.delete(`${api}/contacts/${contact.id}`, {headers});
+
+export const create = async (body) => axios.post(`${api}/contacts`, { headers }, JSON.stringify(body));
