@@ -6,6 +6,8 @@ const contacts = require('./config/contacts');
 
 const app = express();
 
+const jsonParser = bodyParser.json();
+
 app.use(express.static('public'));
 app.use(cors());
 
@@ -23,7 +25,6 @@ app.use(cors());
 // });
 
 app.get('/contacts', (req, res) => {
-    console.log(req.token);
     res.send(contacts.get(req.token))
 });
 
@@ -31,7 +32,7 @@ app.delete('/contacts/:id', (req, res) => {
     res.send(contacts.remove(req.token, req.params.id))
 });
 
-app.post('/contacts', bodyParser.json(), (res, req) => {
+app.post('/contacts', jsonParser, (req, res) => {
     const { name, email} = req.body;
 
     if (name && email) {
