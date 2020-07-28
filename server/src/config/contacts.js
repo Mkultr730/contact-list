@@ -12,20 +12,20 @@ const defaultData = {
             avatarURL: config.origin + '/image.jpg'
         },
         {
-            id: 'martin',
-            name: 'Martin Molinares Araujo',
+            id: 'martin1',
+            name: 'Martin1 Molinares Araujo',
             email: 'memolinares27@hotmail.com',
             avatarURL: config.origin + '/image.jpg'
         },
         {
-            id: 'martin',
-            name: 'Martin Molinares Araujo',
+            id: 'martin2',
+            name: 'Martin2 Molinares Araujo',
             email: 'memolinares27@hotmail.com',
             avatarURL: config.origin + '/image.jpg'
         },
         {
-            id: 'martin',
-            name: 'Martin Molinares Araujo',
+            id: 'martin3',
+            name: 'Martin3 Molinares Araujo',
             email: 'memolinares27@hotmail.com',
             avatarURL: config.origin + '/image.jpg'
         }

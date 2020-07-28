@@ -14,7 +14,6 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await ContactsAPI.getAll();
-      console.log(response);
       setContacts(response.data.contacts);
     }
     fetchData();
@@ -28,6 +27,7 @@ function App() {
   }
 
   const createContact = (contact) => {
+    console.log(contact);
     ContactsAPI.create(contact).then(contact => {
       setContacts([
         ...contacts,

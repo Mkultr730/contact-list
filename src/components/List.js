@@ -12,7 +12,7 @@ const List = ({contacts, removeContact}) => {
                     className='search-contacts'
                     type='text'
                     placeholder='Search contacts..'/>
-                    <Link to='/create'
+                    <Link to='/createContact'
                       className='add-contact'>
                       Add Contact</Link>
                 </div>
